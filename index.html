@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <section id="main-menu" class="screen">
+            
+            <div class="menu-container">
+                <h1>TIC TAC TOE</h1>
+                <p class="menu-subtitle">Choose your game mode</p>
+                <div class="game-mode-container">
+                    <button class="game-mode" id="human-vs-human">
+                        <span class="mode-icon">👱🏻‍♂️ VS 👱🏻‍♂️</span>
+                        <span class="mode-title">HUMAN VS HUMAN</span>
+                    </button>
+
+                    <button class="game-mode" id="human-vs-ai">
+                        <span class="mode-icon">👱🏻‍♂️ VS 🤖</span>
+                        <span class="mode-title">HUMAN VS AI</span>
+                    </button>
+                </div>
+            </div>
+            <button id="theme-toggle" aria-label="Toggle theme">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </section>
+
+        <section id="start-screen" class="screen hide">
+            
+            <button id="back-to-menu" class="back-btn">←</button>
+            <h1>Tic Tac Toe</h1>
+
+            <div class="player-input">
+                <label for="player-o">Player O</label>
+                <input type="text" id="player-o" placeholder="Enter Player Name" maxlength="15">
+            </div>
+
+            <div class="player-input">
+                <label for="player-x">Player X</label>
+                <input type="text" id="player-x" placeholder="Enter Player Name" maxlength="15">
+            </div>
+            
+            <button id="start-game">Start Game</button>
+        </section>
+
+        <section id="game-screen" class="screen hide">
+            <button id="ai-back-btn" class="back-btn hide">←</button>
+
+            <h1>Tic Tac Toe</h1>
+
+            <p id="text-box">Player O's Turn</p>
+
+            <div class="container">
+                <div class="game">
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                    <button class="box"></button>
+                </div>
+            </div>
+
+            <button id="reset">Reset Game</button>
+            <button id="mainMenu-btn">Main Menu</button>
+        </section>
+
+        <section id="ai-screen" class="screen hide">
+            <button id="back-to-menu-ai" class="back-btn">←</button>
+
+            <div class="ai-menu">
+                <h1>TIC TAC TOE</h1>
+                <p>Choose Difficulty</p>
+                <div class="difficulty-container">
+                    <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+                    <button class="difficulty-btn" data-difficulty="moderate">Moderate</button>
+                    <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
